@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="color-scheme" content="light dark" />
+  <link rel="icon" href="data:," />
+  <title>ARI TEN — Private Pool Villa · Ari, Bangkok</title>
+  <style>
+    :root{
+      color-scheme:light dark;
+      --bg:#f3eee4;--surface:#fffaf1;--surface-2:#e9e0d1;--ink:#191713;--muted:#5e594f;
+      --line:#cfc3b0;--gold:#9d7639;--gold-2:#cfb276;--forest:#29443a;--forest-2:#dce6df;
+      --danger:#9b342c;--warn:#b36a18;--shadow:0 22px 60px rgba(44,34,20,.12);
+      --serif:Georgia,"Times New Roman",serif;--sans:Tahoma,"Noto Sans Thai",sans-serif;
+    }
+    @media(prefers-color-scheme:dark){
+      :root{--bg:#151513;--surface:#201f1b;--surface-2:#2a2924;--ink:#f2eadc;--muted:#c2b9aa;--line:#4a463e;--gold:#d0ac6b;--gold-2:#a77f45;--forest:#88aa98;--forest-2:#24352f;--danger:#f08c80;--warn:#e8a65a;--shadow:0 24px 70px rgba(0,0,0,.3)}
+    }
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);line-height:1.65} img{display:block;width:100%} a{color:inherit} button,input{font:inherit}
+    .hero{min-height:93svh;position:relative;display:grid;align-items:end;background:#171512 url('assets/img0.webp') center/cover no-repeat;color:#fff;isolation:isolate}
+    .hero:after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(8,10,8,.14) 10%,rgba(8,10,8,.25) 45%,rgba(8,10,8,.9) 100%)}
+    .hero-inner{width:min(1180px,calc(100% - 36px));margin:0 auto;padding:70px 0 46px}.kicker{font-size:.76rem;letter-spacing:.2em;text-transform:uppercase;color:#ead5a9;font-weight:700}.hero h1{font-family:var(--serif);font-weight:400;font-size:clamp(3.4rem,8vw,7.4rem);letter-spacing:-.045em;line-height:.87;margin:.16em 0 .16em;max-width:900px}.hero .tag{font-size:clamp(1.05rem,2.2vw,1.45rem);margin:0 0 28px;color:#efe8db}.stat-strip{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid rgba(255,255,255,.38);max-width:790px}.stat{padding:16px 18px 0 0}.stat b{display:block;font-family:var(--serif);font-size:1.65rem;font-weight:400}.stat span{font-size:.78rem;color:#ddd4c5}.hero-cta{position:absolute;right:max(18px,calc((100% - 1180px)/2));bottom:50px;border:1px solid rgba(255,255,255,.58);color:white;text-decoration:none;padding:12px 18px;background:rgba(0,0,0,.24)}
+    .section-nav{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 90%,transparent);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}.section-nav .inner{width:min(1180px,calc(100% - 28px));margin:auto;display:flex;gap:10px;overflow:auto;padding:9px 0;scrollbar-width:none}.section-nav a{text-decoration:none;white-space:nowrap;font-size:.82rem;padding:6px 11px;color:var(--muted)}.section-nav a:hover,.section-nav a:focus{color:var(--ink);background:var(--surface-2)}
+    main{overflow:hidden}.wrap{width:min(1180px,calc(100% - 36px));margin:auto}.section{padding:96px 0;border-bottom:1px solid var(--line)}.section-head{display:grid;grid-template-columns:.72fr 1.28fr;gap:56px;margin-bottom:48px;align-items:start}.eyebrow{font-size:.74rem;color:var(--gold);font-weight:700;letter-spacing:.14em;text-transform:uppercase}.section h2{font-family:var(--serif);font-size:clamp(2.25rem,4.7vw,4.35rem);font-weight:400;line-height:1.02;letter-spacing:-.035em;margin:.12em 0}.section-head p{font-size:1.12rem;color:var(--muted);margin:18px 0 0}.lead{font-family:var(--serif);font-size:clamp(1.45rem,2.5vw,2.15rem);line-height:1.35;margin:0}.small{font-size:.82rem;color:var(--muted)}
+    .pill{display:inline-flex;align-items:center;gap:7px;font-size:.74rem;font-weight:700;padding:5px 8px;background:var(--surface-2);color:var(--muted)}.pill.fact:before{content:"";width:7px;height:7px;background:var(--forest);border-radius:50%}.pill.assume:before{content:"";width:7px;height:7px;background:var(--warn);border-radius:50%}.pill.open:before{content:"";width:7px;height:7px;background:var(--danger);border-radius:50%}
+    .principles{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-bottom:60px}.principle{background:var(--surface);padding:30px}.num{font-family:var(--serif);color:var(--gold);font-size:1.1rem}.principle h3{font-family:var(--serif);font-size:1.55rem;margin:20px 0 8px;font-weight:400}.principle p{color:var(--muted);margin:0;font-size:.92rem}
+    .gallery{display:grid;grid-template-columns:1.2fr .8fr;grid-template-rows:auto auto;gap:14px}.gallery figure{margin:0;position:relative;overflow:hidden;background:#222}.gallery figure:first-child{grid-row:span 2}.gallery img{height:100%;object-fit:cover;min-height:280px;transition:transform .7s ease}.gallery figure:hover img{transform:scale(1.015)}.gallery figcaption{position:absolute;left:0;bottom:0;color:white;padding:34px 22px 18px;width:100%;background:linear-gradient(transparent,rgba(0,0,0,.72));font-size:.83rem}.gallery b{font-family:var(--serif);font-size:1.35rem;font-weight:400;display:block}
+    .callout{border-top:3px solid var(--gold);background:var(--surface);padding:24px 26px;box-shadow:var(--shadow)}.callout strong{font-family:var(--serif);font-size:1.3rem}.callout p{margin:8px 0 0;color:var(--muted)}
+    .plan-tabs{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:18px}.plan-tabs button{border:1px solid var(--line);background:transparent;color:var(--ink);padding:10px 14px;cursor:pointer}.plan-tabs button.active{background:var(--forest);border-color:var(--forest);color:white}.plan-panel{display:none}.plan-panel.active{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(270px,.6fr);gap:28px;align-items:start}.plan-drawing{background:var(--surface);border:1px solid var(--line);padding:14px}.plan-drawing svg{display:block;width:100%;height:auto}.plan-copy{padding:12px 0}.plan-copy h3{font-family:var(--serif);font-size:2rem;font-weight:400;margin:0 0 10px}.plan-copy ul{margin:18px 0;padding-left:1.2em}.plan-copy li{margin:8px 0}.legend{display:flex;gap:12px;flex-wrap:wrap;font-size:.75rem;color:var(--muted);margin-top:12px}.legend i{width:10px;height:10px;display:inline-block;margin-right:4px}.area-schedule{width:100%;border-collapse:collapse;margin-top:40px}.area-schedule th,.area-schedule td{text-align:left;padding:14px 10px;border-bottom:1px solid var(--line)}.area-schedule th{font-size:.75rem;color:var(--muted)}.area-schedule td:last-child,.area-schedule th:last-child{text-align:right}.area-schedule tfoot{font-weight:700}
+    .metric-row{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:28px 0}.metric{background:var(--surface);padding:20px;border-top:2px solid var(--gold)}.metric b{display:block;font-family:var(--serif);font-size:clamp(1.55rem,3vw,2.4rem);font-weight:400;line-height:1.1}.metric span{font-size:.78rem;color:var(--muted)}
+    .fact-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.fact-card{background:var(--surface);padding:24px}.fact-card h3{margin:12px 0 6px;font-family:var(--serif);font-weight:400;font-size:1.45rem}.fact-card p{margin:0;color:var(--muted);font-size:.9rem}.fact-card.danger{background:color-mix(in srgb,var(--danger) 9%,var(--surface))}
+    .risk-list{margin-top:28px;border-top:1px solid var(--line)}.risk{display:grid;grid-template-columns:42px 1fr auto;gap:14px;padding:17px 0;border-bottom:1px solid var(--line);align-items:start}.risk .rank{font-family:var(--serif);font-size:1.4rem;color:var(--gold)}.risk h4{margin:0 0 4px}.risk p{margin:0;color:var(--muted);font-size:.88rem}.severity{font-size:.7rem;font-weight:700;padding:4px 7px;color:white;background:var(--danger)}.severity.med{background:var(--warn)}
+    .market-layout{display:grid;grid-template-columns:.85fr 1.15fr;gap:22px}.land-card{background:var(--forest);color:#fff;padding:32px;min-height:350px;display:flex;flex-direction:column;justify-content:space-between}.land-card .big{font-family:var(--serif);font-size:clamp(3rem,6vw,5.6rem);line-height:.9;letter-spacing:-.06em}.land-card p{color:#dce8e1}.compare{background:var(--surface);padding:26px}.compare h3{font-family:var(--serif);font-size:1.6rem;font-weight:400;margin:0 0 16px}.comp-row{display:grid;grid-template-columns:1fr 90px 90px;gap:12px;padding:13px 0;border-bottom:1px solid var(--line);font-size:.86rem}.comp-row.head{font-size:.72rem;color:var(--muted)}.comp-row b{text-align:right}.model-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:30px}.model{background:var(--surface);padding:20px;display:flex;flex-direction:column}.model .code{font-family:var(--serif);font-size:1.5rem;color:var(--gold)}.model h3{font-size:1rem;margin:10px 0 6px}.model .revenue{font-family:var(--serif);font-size:1.7rem;margin:12px 0}.model p{font-size:.8rem;color:var(--muted);margin:0}.model.recommend{outline:2px solid var(--forest)}
+    .capex-chart{background:var(--surface);padding:26px;margin-bottom:20px}.capex-chart h3{font-family:var(--serif);font-size:1.65rem;font-weight:400;margin:0 0 6px}.capex-chart svg{width:100%;height:auto}.finance-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:22px;align-items:start}.budget-notes{display:grid;gap:10px}.budget-note{background:var(--surface);padding:18px;display:grid;grid-template-columns:1fr auto;gap:12px}.budget-note b:last-child{font-family:var(--serif);font-size:1.3rem;font-weight:400}.calculator{background:var(--forest);color:#fff;padding:30px;box-shadow:var(--shadow)}.calculator h3{font-family:var(--serif);font-size:2rem;font-weight:400;margin:0}.calculator .sub{color:#d9e4de;margin:4px 0 22px;font-size:.85rem}.presets{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:20px}.presets button{background:transparent;border:1px solid rgba(255,255,255,.42);color:white;padding:7px 10px;cursor:pointer}.presets button:hover{background:#fff;color:#1d332b}.control{margin:18px 0}.control-head{display:flex;justify-content:space-between;gap:12px;font-size:.83rem}.control output{font-weight:700;color:#f0cf91}.control input[type=range]{width:100%;accent-color:#e1bf78}.radio{display:flex;gap:12px;flex-wrap:wrap}.radio label{border:1px solid rgba(255,255,255,.35);padding:8px 10px;cursor:pointer}.radio input{margin-right:5px}.calc-results{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:rgba(255,255,255,.25);margin-top:25px}.calc-result{background:#1f392f;padding:18px}.calc-result span{font-size:.72rem;color:#bfd0c6}.calc-result b{display:block;font-family:var(--serif);font-weight:400;font-size:1.7rem}.formula{font-size:.72rem;color:#bdd0c5;margin-top:15px}
+    .returns{margin-top:28px}.case{display:grid;grid-template-columns:1.2fr repeat(4,.7fr);gap:10px;padding:15px 10px;border-bottom:1px solid var(--line);align-items:center}.case.head{font-size:.72rem;color:var(--muted)}.case b:not(:first-child),.case span:not(:first-child){text-align:right}.case.upside{background:var(--forest-2)}
+    .timeline{position:relative;display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:28px}.timeline:before{content:"";position:absolute;left:5%;right:5%;top:18px;border-top:1px solid var(--gold)}.phase{position:relative;padding-top:48px}.phase:before{content:"";position:absolute;top:10px;left:0;width:16px;height:16px;border:4px solid var(--bg);background:var(--gold);border-radius:50%}.phase small{color:var(--gold);font-weight:700}.phase h3{font-family:var(--serif);font-size:1.4rem;font-weight:400;margin:4px 0}.phase p{font-size:.83rem;color:var(--muted);margin:0}.build-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:40px}.build-card{border:1px solid var(--line);padding:22px}.build-card h3{font-family:var(--serif);font-weight:400}.build-card p{color:var(--muted);font-size:.87rem}
+    .steps{counter-reset:step;display:grid;gap:0;border-top:1px solid var(--line)}.step{counter-increment:step;display:grid;grid-template-columns:70px 1fr auto;gap:18px;padding:24px 0;border-bottom:1px solid var(--line);align-items:start}.step:before{content:"0" counter(step);font-family:var(--serif);color:var(--gold);font-size:1.5rem}.step h3{margin:0 0 5px}.step p{margin:0;color:var(--muted);font-size:.88rem}.step .tag-state{font-size:.72rem;font-weight:700;color:var(--danger)}
+    .options{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:40px}.option{background:var(--surface);padding:26px;position:relative}.option h3{font-family:var(--serif);font-size:1.45rem;font-weight:400}.option p{font-size:.86rem;color:var(--muted)}.option.recommended{background:var(--forest);color:white}.option.recommended p{color:#d9e5de}
+    .verdict{padding:110px 0;background:var(--forest);color:white}.verdict .wrap{display:grid;grid-template-columns:.55fr 1.45fr;gap:50px}.verdict .eyebrow{color:#e7c78a}.verdict blockquote{font-family:var(--serif);font-size:clamp(2rem,4.5vw,4.3rem);line-height:1.12;letter-spacing:-.035em;margin:0}.verdict p{color:#dbe5df;max-width:720px}.sources{padding:72px 0}.source-legend{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0 34px}.source-legend span{background:var(--surface);border:1px solid var(--line);padding:8px 11px;font-size:.78rem}.sources details{border-top:1px solid var(--line);padding:18px 0}.sources summary{cursor:pointer;font-family:var(--serif);font-size:1.35rem}.source-list{list-style:none;margin:14px 0 0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:10px 28px}.source-list li{background:var(--surface);padding:16px 18px;color:var(--muted);font-size:.82rem}.source-list a{display:inline-block;color:var(--ink);font-weight:700;text-decoration-color:var(--gold);overflow-wrap:anywhere;margin-bottom:5px}.accessed{display:block;color:var(--gold);font-size:.72rem;margin-top:6px}.disclaimer{font-size:.78rem;color:var(--muted);border-top:1px solid var(--line);padding:25px 0 50px;display:flex;justify-content:space-between;gap:20px}
+    .location-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}.location-feature{background:var(--surface);padding:30px}.location-feature h3{font-family:var(--serif);font-size:1.55rem;font-weight:400;margin:18px 0 8px}.location-feature p{color:var(--muted);font-size:.92rem;margin:0}.location-quote{margin-top:22px;background:var(--forest);color:white;padding:34px;display:grid;grid-template-columns:.55fr 1.45fr;gap:28px;align-items:start}.location-quote span{color:#e7c78a;font-size:.75rem;letter-spacing:.16em}.location-quote p{font-family:var(--serif);font-size:clamp(1.4rem,2.6vw,2.2rem);line-height:1.35;margin:0}
+    .contact{padding:100px 0 72px;background:var(--forest);color:#fff}.contact .wrap{display:grid;grid-template-columns:.72fr 1.28fr;gap:54px;align-items:start}.contact .eyebrow{color:#e7c78a}.contact h2{font-family:var(--serif);font-size:clamp(2.7rem,5vw,5rem);font-weight:400;line-height:1;letter-spacing:-.04em;margin:.12em 0}.contact p{color:#dbe5df;max-width:680px}.contact-actions{display:flex;gap:10px;flex-wrap:wrap;margin:28px 0 24px}.contact-action{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:12px 18px;border:1px solid rgba(255,255,255,.52);color:#fff;text-decoration:none;background:transparent}.contact-action.primary{background:#fff;color:#1d332b;border-color:#fff}.contact-action:disabled{opacity:.9;cursor:default}.contact-note{font-size:.76rem;color:#bdd0c5}.music-credit{margin-top:44px;padding-top:20px;border-top:1px solid rgba(255,255,255,.22);font-size:.72rem;color:#afc3b8}.music-credit a{color:#e7c78a}
+    .music-toggle{position:fixed;right:max(16px,env(safe-area-inset-right));bottom:max(16px,env(safe-area-inset-bottom));z-index:40;width:52px;height:52px;border:1px solid rgba(255,255,255,.38);border-radius:50%;background:rgba(29,51,43,.94);color:white;box-shadow:0 12px 32px rgba(0,0,0,.24);display:grid;place-items:center;cursor:pointer}.music-toggle:hover,.music-toggle:focus-visible{background:#fff;color:#1d332b;border-color:#fff}.music-toggle svg{width:21px;height:21px}.music-toggle .icon-pause{display:none}.music-toggle[aria-pressed="true"] .icon-play{display:none}.music-toggle[aria-pressed="true"] .icon-pause{display:block}
+    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+    @media(max-width:850px){
+      .hero{min-height:820px}.hero-cta{position:static;display:inline-block;margin-top:25px}.stat-strip{grid-template-columns:repeat(2,1fr);gap:10px}.section{padding:72px 0}.section-head{grid-template-columns:1fr;gap:8px}.principles,.model-grid,.options{grid-template-columns:1fr 1fr}.gallery{grid-template-columns:1fr}.gallery figure:first-child{grid-row:auto}.plan-panel.active,.market-layout,.finance-grid,.verdict .wrap{grid-template-columns:1fr}.metric-row{grid-template-columns:1fr 1fr}.timeline{grid-template-columns:1fr 1fr}.timeline:before{display:none}.phase{padding-top:18px;border-top:1px solid var(--gold)}.phase:before{display:none}.build-grid{grid-template-columns:1fr}.case{grid-template-columns:1fr 1fr 1fr}.case>*:nth-child(4),.case>*:nth-child(5){display:none}.source-list{grid-template-columns:1fr}.location-grid{grid-template-columns:1fr}.location-quote,.contact .wrap{grid-template-columns:1fr}.contact{padding:76px 0 56px}
+    }
+    @media(max-width:560px){
+      .wrap,.hero-inner{width:min(100% - 24px,1180px)}.hero{min-height:760px}.hero h1{font-size:3.35rem}.section-nav{position:relative}.section-nav .inner{width:calc(100% - 18px);flex-wrap:wrap;justify-content:center;gap:2px 5px}.section-nav a{padding:4px 7px}.principles,.model-grid,.options,.fact-grid{grid-template-columns:1fr}.gallery img{min-height:240px}.metric-row{grid-template-columns:1fr 1fr}.metric{padding:16px}.risk{grid-template-columns:32px 1fr}.risk .severity{grid-column:2}.comp-row{grid-template-columns:1fr 72px}.comp-row>*:nth-child(3){display:none}.calculator{padding:22px 18px}.calc-results{grid-template-columns:1fr 1fr}.returns{overflow:hidden}.case{font-size:.82rem}.timeline{grid-template-columns:1fr}.step{grid-template-columns:44px 1fr}.step .tag-state{grid-column:2}.disclaimer{display:block}.section h2{font-size:2.6rem}.location-quote{padding:24px}.contact-actions{display:grid}.contact-action{width:100%}.music-toggle{width:48px;height:48px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.gallery img{transition:none}}
+  </style>
+</head>
+<body>
+  <header class="hero" aria-label="ภาพแนวคิดพูลวิลล่า 3 ชั้นโอบล้อมสระกลาง">
+    <div class="hero-inner">
+      <div class="kicker">A private urban retreat in Ari, Bangkok</div>
+      <h1>ARI TEN</h1>
+      <p class="tag">Private Pool Villa · 10 Suites · ใกล้ BTS อารีย์</p>
+      <div class="stat-strip" aria-label="ข้อมูลโครงการโดยสรุป">
+        <div class="stat"><b>100 ตร.ว.</b><span>ที่ดิน 400 ตร.ม.</span></div>
+        <div class="stat"><b>3 ชั้น</b><span>พื้นที่ใช้สอย ~950 ตร.ม.</span></div>
+        <div class="stat"><b>10 สวีท</b><span>2 + 4 + 4 ห้อง</span></div>
+        <div class="stat"><b>10 × 4 ม.</b><span>Infinity courtyard pool</span></div>
+      </div>
+      <a class="hero-cta" href="#concept">สำรวจ ARI TEN ↓</a>
+    </div>
+  </header>
+
+  <nav class="section-nav" aria-label="สารบัญ">
+    <div class="inner">
+      <a href="#concept">แนวคิด</a><a href="#plans">ผังพื้นที่</a><a href="#location">ทำเล</a><a href="#contact">ติดต่อ</a>
+    </div>
+  </nav>
+
+  <main>
+    <section class="section" id="concept">
+      <div class="wrap">
+        <div class="section-head">
+          <div><span class="eyebrow">01 · Design vision</span><h2>เมืองข้างนอก<br>สงบข้างใน</h2></div>
+          <p class="lead">บ้านรูปตัว L โอบคอร์ทยาร์ดและสระกลาง มอบความเป็นส่วนตัวให้ทั้ง 10 ห้องสวีท ท่ามกลางวัสดุโทนอุ่น ระแนงไม้ และสวนเขตร้อน—พื้นที่พักใจกลางอารีย์ที่สงบตั้งแต่วินาทีแรกที่ก้าวเข้ามา</p>
+        </div>
+        <div class="principles">
+          <article class="principle"><span class="num">01</span><h3>Urban Sanctuary</h3><p>หลบจากจังหวะเมืองเข้าสู่ความสงบของคอร์ทยาร์ดส่วนตัว พร้อมสวนและผิวน้ำที่มองเห็นได้จากพื้นที่หลักของบ้าน</p></article>
+          <article class="principle"><span class="num">02</span><h3>Modern Tropical Craft</h3><p>คอนกรีตลายไม้ หินทราเวอร์ทีน ระแนงไม้ และกระจกเต็มบาน สร้างบรรยากาศร่วมสมัยที่อบอุ่นและโปร่งสบาย</p></article>
+          <article class="principle"><span class="num">03</span><h3>Private by Design</h3><p>แต่ละสวีทถูกวางให้มีมุมสงบของตัวเอง ขณะที่ lounge, dining pavilion และสระกลางเชื่อมทุกคนไว้ด้วยกันอย่างเป็นธรรมชาติ</p></article>
+        </div>
+        <div class="gallery" aria-label="ภาพแนวคิดการออกแบบ">
+          <figure><img src="assets/img1.webp" alt="ภาพแนวคิดอาคารสามชั้นและสระอินฟินิตี้ท่ามกลางสวนเขตร้อน" /><figcaption><b>Courtyard Pool</b>สระ 10 × 4 ม. เป็นหัวใจของบ้านและพื้นที่รวมกลุ่ม</figcaption></figure>
+          <figure><img src="assets/img2.webp" alt="ภาพแนวคิดเลานจ์เพดานสูงเปิดสู่สวนและสระ" /><figcaption><b>Double-height Lounge</b>พื้นที่รับรอง 20 คน เชื่อม dining pavilion</figcaption></figure>
+          <figure><img src="assets/img3.webp" alt="ภาพแนวคิดห้องสวีทโทนไม้เปิดสู่สวนและสระ" /><figcaption><b>Pool-access Suite</b>วัสดุอบอุ่น เปิดรับสวน พร้อมห้องน้ำส่วนตัว</figcaption></figure>
+        </div>
+        <div class="callout" style="margin-top:28px"><strong>บ้านสำหรับการพักผ่อนและช่วงเวลาพิเศษ</strong><p>รองรับทั้งการอยู่อาศัยแบบครอบครัวใหญ่ การพักผ่อนกับเพื่อน และการต้อนรับแขกในบรรยากาศเป็นส่วนตัว โดยภาพและผังในหน้านี้เป็นแบบร่างคอนเซ็ปต์เพื่อสื่อสารแนวทางการออกแบบ</p></div>
+      </div>
+    </section>
+
+    <section class="section" id="plans">
+      <div class="wrap">
+        <div class="section-head">
+          <div><span class="eyebrow">02 · Site & floor plans</span><h2>950 ตร.ม.<br>เพื่อชีวิตที่กว้างขึ้น</h2></div>
+          <div><p>พื้นที่ใช้สอยบน 3 ชั้นเปิดรับทั้งการพักผ่อนและการสังสรรค์ โดยมีคอร์ทยาร์ด สระกลาง และพื้นที่ส่วนตัวของแต่ละสวีทเป็นหัวใจของบ้าน</p><span class="pill assume">แบบร่างคอนเซ็ปต์</span></div>
+        </div>
+        <div class="plan-tabs" role="tablist" aria-label="เลือกดูผัง">
+          <button class="active" role="tab" aria-selected="true" aria-controls="site-panel" data-tab="site">Site plan</button>
+          <button role="tab" aria-selected="false" aria-controls="g-panel" data-tab="g">ชั้น G</button>
+          <button role="tab" aria-selected="false" aria-controls="l2-panel" data-tab="l2">ชั้น 2</button>
+          <button role="tab" aria-selected="false" aria-controls="l3-panel" data-tab="l3">ชั้น 3</button>
+        </div>
+
+        <div class="plan-panel active" id="site-panel" data-panel="site" role="tabpanel">
+          <div class="plan-drawing"><svg viewBox="0 0 760 500" role="img" aria-label="ผังคอนเซ็ปต์ที่ดิน 20 คูณ 20 เมตร อาคารรูปตัว L สระกลางและลานจอดรถ stacker">
+            <defs><pattern id="grid" width="25" height="25" patternUnits="userSpaceOnUse"><path d="M25 0H0V25" fill="none" stroke="currentColor" opacity=".08"/></pattern></defs>
+            <rect width="760" height="500" fill="url(#grid)"/><rect x="80" y="45" width="600" height="380" fill="none" stroke="currentColor" stroke-width="3"/>
+            <rect x="115" y="75" width="430" height="95" fill="#b9a27a" opacity=".82"/><rect x="115" y="170" width="135" height="170" fill="#b9a27a" opacity=".82"/>
+            <rect x="285" y="205" width="300" height="94" rx="3" fill="#477c79"/><rect x="285" y="299" width="300" height="36" fill="#8a6c45" opacity=".72"/>
+            <rect x="115" y="345" width="220" height="55" fill="#746f64"/><rect x="350" y="345" width="235" height="55" fill="#d0b172" opacity=".82"/>
+            <text x="330" y="125" text-anchor="middle" fill="#191713" font-size="22" font-family="Georgia">L-SHAPE VILLA</text><text x="330" y="149" text-anchor="middle" fill="#191713" font-size="13">3 ชั้น · footprint ~300 ตร.ม.</text>
+            <text x="435" y="258" text-anchor="middle" fill="white" font-size="20" font-family="Georgia">POOL 10 × 4 M</text><text x="435" y="323" text-anchor="middle" fill="white" font-size="13">TIMBER DECK</text>
+            <text x="225" y="379" text-anchor="middle" fill="white" font-size="15">STACKER PARKING · 10 คัน</text><text x="470" y="379" text-anchor="middle" fill="#191713" font-size="15">ARRIVAL COURT</text>
+            <path d="M460 455v-42" stroke="currentColor" stroke-width="2" marker-end="url(#arrow)"/><text x="485" y="453" fill="currentColor" font-size="13">ซอยด้านทิศใต้</text>
+            <path d="M635 110V70" stroke="currentColor" stroke-width="2"/><path d="M635 70l-7 14h14z" fill="currentColor"/><text x="628" y="63" fill="currentColor" font-weight="bold">N</text>
+            <text x="585" y="95" fill="currentColor" font-size="12">สวน / OSR ≥10%</text>
+          </svg></div>
+          <div class="plan-copy"><span class="pill fact">Private courtyard</span><h3>Site experience</h3><ul><li>อาคารรูปตัว L โอบพื้นที่ส่วนกลางไว้ในบรรยากาศสงบและเป็นส่วนตัว</li><li>Arrival court สร้างจังหวะต้อนรับก่อนเข้าสู่โถงสูงของบ้าน</li><li>สระและ deck เชื่อม lobby, lounge และ 2 pool-access suites อย่างลื่นไหล</li><li>พื้นที่จอดรถแยกจากโซนพักผ่อน เพื่อให้คอร์ทยาร์ดคงความสงบตลอดวัน</li></ul><div class="legend"><span><i style="background:#b9a27a"></i>อาคาร</span><span><i style="background:#477c79"></i>สระ</span><span><i style="background:#746f64"></i>ที่จอดรถ</span></div></div>
+        </div>
+
+        <div class="plan-panel" id="g-panel" data-panel="g" role="tabpanel">
+          <div class="plan-drawing"><svg viewBox="0 0 760 460" role="img" aria-label="ผังคอนเซ็ปต์ชั้น G พร้อมพื้นที่รับรอง ครัว ยิม และห้อง pool access สองห้อง">
+            <rect x="35" y="35" width="690" height="390" fill="#eee5d5" stroke="#7d6b51" stroke-width="3"/>
+            <rect x="55" y="55" width="210" height="150" fill="#c6a973"/><rect x="265" y="55" width="220" height="150" fill="#e0cfae"/><rect x="485" y="55" width="220" height="150" fill="#d8bd8d"/>
+            <rect x="55" y="205" width="210" height="195" fill="#9fc2b6"/><rect x="265" y="205" width="220" height="195" fill="#d3b279"/><rect x="485" y="205" width="110" height="195" fill="#aeb6ad"/><rect x="595" y="205" width="110" height="195" fill="#879f95"/>
+            <g fill="#29251f" text-anchor="middle" font-family="Tahoma" font-size="15"><text x="160" y="120">ARRIVAL LOBBY</text><text x="375" y="120">LOUNGE</text><text x="595" y="115">DINING 20 ที่นั่ง</text><text x="160" y="292">POOL SUITE 01</text><text x="375" y="292">POOL SUITE 02</text><text x="540" y="292">GYM</text><text x="650" y="285">SERVICE</text><text x="650" y="307">KITCHEN / MEP</text></g>
+            <text x="380" y="445" text-anchor="middle" fill="currentColor" font-size="14">Concept G floor · ~320 ตร.ม.</text>
+          </svg></div>
+          <div class="plan-copy"><span class="pill assume">พื้นที่ ~320 ตร.ม.</span><h3>Ground floor</h3><ul><li>Arrival lobby แบบ double-height</li><li>Lounge + dining pavilion 20 ที่นั่ง</li><li>Show kitchen แยก service kitchen</li><li>Pool-access suites 2 ห้อง × ~40 ตร.ม.</li><li>Gym, WC, service/MEP core, ลิฟต์และบันได</li></ul></div>
+        </div>
+
+        <div class="plan-panel" id="l2-panel" data-panel="l2" role="tabpanel">
+          <div class="plan-drawing"><svg viewBox="0 0 760 460" role="img" aria-label="ผังคอนเซ็ปต์ชั้น 2 มีห้อง deluxe suite สี่ห้องและโถงกลาง">
+            <rect x="35" y="35" width="690" height="390" fill="#eee5d5" stroke="#7d6b51" stroke-width="3"/>
+            <rect x="55" y="55" width="285" height="145" fill="#cdb17e"/><rect x="420" y="55" width="285" height="145" fill="#d6bd8d"/><rect x="55" y="260" width="285" height="145" fill="#d6bd8d"/><rect x="420" y="260" width="285" height="145" fill="#cdb17e"/>
+            <rect x="340" y="55" width="80" height="350" fill="#9bada4"/><g fill="#29251f" text-anchor="middle" font-family="Tahoma" font-size="15"><text x="198" y="125">DELUXE 03</text><text x="562" y="125">DELUXE 04</text><text x="198" y="330">DELUXE 05</text><text x="562" y="330">DELUXE 06</text><text x="380" y="220" transform="rotate(-90 380 220)">LIFT · STAIR · CORRIDOR</text></g>
+            <text x="380" y="445" text-anchor="middle" fill="currentColor" font-size="14">Concept Level 2 · ~320 ตร.ม.</text>
+          </svg></div>
+          <div class="plan-copy"><span class="pill assume">พื้นที่ ~320 ตร.ม.</span><h3>Level 2</h3><ul><li>Deluxe suite 4 ห้อง × ~45 ตร.ม.</li><li>2 ห้องมี terrace หันเข้าสระ</li><li>โถงกลางสั้น ลดพื้นที่ circulation</li><li>ลิฟต์และบันไดรวมใน service core</li></ul></div>
+        </div>
+
+        <div class="plan-panel" id="l3-panel" data-panel="l3" role="tabpanel">
+          <div class="plan-drawing"><svg viewBox="0 0 760 460" role="img" aria-label="ผังคอนเซ็ปต์ชั้น 3 มี deluxe suite สองห้อง master suite สองห้องและ sky lounge">
+            <rect x="35" y="35" width="690" height="390" fill="#eee5d5" stroke="#7d6b51" stroke-width="3"/>
+            <rect x="55" y="55" width="205" height="155" fill="#d8bd8d"/><rect x="260" y="55" width="205" height="155" fill="#d8bd8d"/><rect x="465" y="55" width="240" height="155" fill="#a9c0b3"/>
+            <rect x="55" y="210" width="295" height="195" fill="#c49f62"/><rect x="350" y="210" width="355" height="195" fill="#c49f62"/><g fill="#29251f" text-anchor="middle" font-family="Tahoma" font-size="15"><text x="158" y="130">DELUXE 07</text><text x="362" y="130">DELUXE 08</text><text x="585" y="125">SKY LOUNGE</text><text x="585" y="147">TERRACE</text><text x="202" y="310">MASTER 09 · 60 ตร.ม.</text><text x="527" y="310">MASTER 10 · 60 ตร.ม.</text></g>
+            <text x="380" y="445" text-anchor="middle" fill="currentColor" font-size="14">Concept Level 3 · ~310 ตร.ม.</text>
+          </svg></div>
+          <div class="plan-copy"><span class="pill assume">พื้นที่ ~310 ตร.ม.</span><h3>Level 3</h3><ul><li>Deluxe suite 2 ห้อง</li><li>Master suite 2 ห้อง × ~60 ตร.ม. พร้อม terrace</li><li>Sky lounge terrace รวม มองเข้าสระและวิวเมือง</li><li>รวมทั้งอาคารครบ 10 ห้องนอน</li></ul></div>
+        </div>
+
+        <table class="area-schedule" aria-label="ตารางพื้นที่ใช้สอยตามชั้น"><thead><tr><th>ชั้น</th><th>โปรแกรมหลัก</th><th>พื้นที่คอนเซ็ปต์</th></tr></thead><tbody><tr><td>G</td><td>Lobby, lounge, dining, kitchen, gym, 2 suites</td><td>~320 ตร.ม.</td></tr><tr><td>2</td><td>4 deluxe suites + circulation</td><td>~320 ตร.ม.</td></tr><tr><td>3</td><td>2 deluxe, 2 master, sky lounge</td><td>~310 ตร.ม.</td></tr></tbody><tfoot><tr><td colspan="2">รวม / FAR</td><td>~950 ตร.ม. / 2.38</td></tr></tfoot></table>
+      </div>
+    </section>
+
+    <section class="section" id="legal" hidden>
+      <div class="wrap">
+        <div class="section-head"><div><span class="eyebrow">03 · Legal feasibility</span><h2>สร้างได้ในทฤษฎี<br>แต่ยังไม่ผ่านรายแปลง</h2></div><div><p>ประเด็นชี้ขาดไม่ใช่ความสูง 3 ชั้น แต่คือโซนผังเมืองรายแปลง สถานะถนนสาธารณะ ความกว้างซอย และความเป็นไปได้ของที่จอดรถ 10 คัน</p><span class="pill open">Open questions สำคัญ</span></div></div>
+        <div class="metric-row"><div class="metric"><b>FAR 3:1</b><span>คาดว่าโซน ย.4 · ต้องยืนยัน</span></div><div class="metric"><b>OSR ≥10%</b><span>ของพื้นที่อาคารรวม</span></div><div class="metric"><b>≥10 คัน</b><span>ที่จอดรถขั้นต่ำ</span></div><div class="metric"><b>ไม่ทำ EIA</b><span>ต่ำกว่า 80 ห้อง / 4,000 ตร.ม.</span></div></div>
+        <div class="fact-grid">
+          <article class="fact-card danger"><span class="pill fact">กฎหมายปัจจุบัน</span><h3>10 ห้อง = โรงแรมประเภท 1</h3><p>การให้เช่ารายวันเกินเกณฑ์ยกเว้น ≤8 ห้อง / ≤30 คน ต้องขอใบอนุญาต ค่าธรรมเนียม 10,000 บาท อายุ 5 ปี และควรเผื่อขั้นตอน 4–6 เดือน</p></article>
+          <article class="fact-card"><span class="pill fact">ก่อนยื่นโรงแรม</span><h3>ต้องมีใบรับรอง อ.6</h3><p>โรงแรมเป็นอาคารควบคุมการใช้ ก่อสร้างเสร็จต้องให้สำนักงานเขตตรวจและออกใบรับรองก่อนยื่นขอใบอนุญาตโรงแรม</p></article>
+          <article class="fact-card"><span class="pill fact">ระยะร่น</span><h3>อาคารสูง 9–23 ม. ร่น ≥3 ม.</h3><p>ผนังมีช่องเปิดต้องร่นข้างและหลังอย่างน้อย 3 ม.; ถนนกว้าง &lt;10 ม. อาคารเกิน 2 ชั้นต้องร่นจากกึ่งกลางถนน ≥6 ม.</p></article>
+          <article class="fact-card"><span class="pill assume">กฎหมายยังไม่ใช้</span><h3>ร่าง พ.ร.บ. ใหม่อาจเบาลง</h3><p>ร่างสถานที่พักแรมที่ ครม. เห็นชอบ ก.ย. 2026 จะให้ 8–40 ห้องเป็น “จำพวก 2” แบบขึ้นทะเบียน แต่ยังไม่เป็นกฎหมาย จึงใช้เป็นฐานตัดสินใจไม่ได้</p></article>
+          <article class="fact-card"><span class="pill fact">ภาษี</span><h3>พาณิชย์ 0.3%</h3><p>อัตราภาษีที่ดินและสิ่งปลูกสร้างสำหรับมูลค่าไม่เกิน 50 ล้านบาท; ตัวอย่างฐาน 45 ล้านบาท ≈ 135,000 บาท/ปี ต้องคำนวณจากราคาประเมินจริง</p></article>
+          <article class="fact-card"><span class="pill fact">สิ่งแวดล้อม</span><h3>ต้องบำบัดน้ำเสีย</h3><p>แม้ไม่ต้องทำ EIA แต่โรงแรมเป็นแหล่งกำเนิดมลพิษ ต้องมีระบบบำบัดน้ำเสียตามมาตรฐานและบันทึกการทำงานระบบ</p></article>
+        </div>
+        <div class="risk-list" aria-label="ความเสี่ยงกฎหมายเรียงตามความสำคัญ">
+          <div class="risk"><span class="rank">01</span><div><h4>ซอยแคบ + ลึก ~200 ม.</h4><p>เสี่ยงทั้งระยะร่น เกณฑ์ “คมนาคมสะดวกปลอดภัย” และการเข้าถึงของรถดับเพลิง</p></div><span class="severity">สูง</span></div>
+          <div class="risk"><span class="rank">02</span><div><h4>ที่ดินติดถนนสาธารณะหรือไม่</h4><p>ทางส่วนบุคคลหรือภาระจำยอมอาจทำให้ขออนุญาตก่อสร้างไม่ได้</p></div><span class="severity">สูง</span></div>
+          <div class="risk"><span class="rank">03</span><div><h4>โรงแรมในโซน ย.4</h4><p>คาดว่าอยู่ ย.4 แต่ต้องยืนยันข้อกำกับในบัญชีท้ายกฎกระทรวงรายแปลง</p></div><span class="severity med">กลาง</span></div>
+          <div class="risk"><span class="rank">04</span><div><h4>ที่จอดรถ 10 คัน</h4><p>ระบบ stacker เป็นคำตอบเบื้องต้น; หากใช้ไม่ได้อาจต้องทำใต้ดินหรือลดจำนวนห้อง</p></div><span class="severity med">กลาง</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section location-section" id="location">
+      <div class="wrap">
+        <div class="section-head"><div><span class="eyebrow">03 · Ari lifestyle</span><h2>สงบในซอย<br>ใกล้ชีวิตเมือง</h2></div><p class="lead">ใช้ชีวิตท่ามกลางเสน่ห์ของอารีย์—ย่านที่รวมคาเฟ่ ร้านอาหาร และพื้นที่สร้างสรรค์ไว้ในบรรยากาศเป็นกันเอง พร้อมการเดินทางที่เชื่อมต่อเมืองได้สะดวกจาก BTS อารีย์</p></div>
+        <div class="location-grid">
+          <article class="location-feature"><span class="num">01</span><h3>ใกล้ BTS อารีย์</h3><p>เชื่อมต่อย่านธุรกิจและจุดหมายสำคัญของกรุงเทพฯ ได้อย่างคล่องตัว โดยยังได้ความสงบเมื่อกลับเข้าสู่ซอย</p></article>
+          <article class="location-feature"><span class="num">02</span><h3>Ari neighbourhood</h3><p>รายล้อมด้วยร้านอาหาร คาเฟ่ และไลฟ์สไตล์ที่มีเอกลักษณ์ เหมาะทั้งวันทำงาน วันพักผ่อน และการต้อนรับแขก</p></article>
+          <article class="location-feature"><span class="num">03</span><h3>ความเป็นส่วนตัว</h3><p>ทำเลในซอยลึกประมาณ 200 เมตร ช่วยลดจังหวะวุ่นวายจากถนนหลัก และสร้างบรรยากาศสงบให้ตัวบ้าน</p></article>
+        </div>
+        <div class="location-quote"><span>ARI, BANGKOK</span><p>พื้นที่ส่วนตัวสำหรับอยู่อาศัย พักผ่อน และใช้เวลาร่วมกัน—ในย่านที่มีชีวิตชีวาที่สุดแห่งหนึ่งของกรุงเทพฯ</p></div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="wrap">
+        <div><span class="eyebrow">Private viewing</span><h2>สนใจชมบ้าน<br>ติดต่อเรา</h2></div>
+        <div><p class="lead">สัมผัสบรรยากาศของ ARI TEN และพูดคุยรายละเอียดการขายหรือเช่าแบบเป็นส่วนตัว</p><div class="contact-actions"><button class="contact-action primary" type="button" disabled aria-disabled="true">โทร · [เบอร์โทร]</button><button class="contact-action" type="button" disabled aria-disabled="true">LINE · [Line ID]</button></div><p class="contact-note">ข้อมูลติดต่อเป็นช่องสำหรับเจ้าของประกาศกรอกภายหลัง</p><footer class="music-credit">Music: “Metaphor” by Jason Shaw — <a href="https://commons.wikimedia.org/wiki/File:Audionautix-com-ccby-metaphor.mp3" target="_blank" rel="noopener">music by audionautix.com · CC BY 3.0</a></footer></div>
+      </div>
+    </section>
+
+    <section class="section" id="finance" hidden>
+      <div class="wrap">
+        <div class="section-head"><div><span class="eyebrow">05 · Financial feasibility</span><h2>Capex สูง<br>yield ต่ำ</h2></div><div><p>งบก่อสร้าง Base ไม่รวมที่ดินอยู่ที่ประมาณ 80 ล้านบาท ขณะที่โมเดลเช่าทั้งหลังฐานสร้าง NOI เพียง ~1.1 ล้านบาทต่อปี จึงไม่ใช่โครงการ cash yield สูง</p><span class="pill assume">ตัวเลขเพื่อ screening</span></div></div>
+        <div class="finance-grid">
+          <div>
+            <div class="capex-chart"><h3>งบลงทุน 3 ระดับ 📊</h3><p class="small">ล้านบาท · ไม่รวมที่ดิน · ประมาณการจาก benchmark ไม่ใช่ใบเสนอราคา</p><svg viewBox="0 0 560 250" role="img" aria-labelledby="capexTitle capexDesc"><title id="capexTitle">งบลงทุน Lean 64 Base 80 และ High 108 ล้านบาท</title><desc id="capexDesc">แผนภูมิแท่งเริ่มที่ศูนย์ แกนสูงสุด 120 ล้านบาท</desc><line x1="90" y1="205" x2="520" y2="205" stroke="currentColor" opacity=".4"/><g font-family="Tahoma" font-size="12" fill="currentColor"><text x="88" y="225">0</text><text x="230" y="225">40</text><text x="372" y="225">80</text><text x="505" y="225">120</text></g><g><rect x="105" y="120" width="95" height="85" fill="#718d7e"/><rect x="245" y="98" width="95" height="107" fill="#9d7639"/><rect x="385" y="61" width="95" height="144" fill="#704f3e"/></g><g text-anchor="middle" font-family="Tahoma" fill="currentColor"><text x="152" y="109" font-size="18" font-weight="bold">64</text><text x="292" y="87" font-size="18" font-weight="bold">80</text><text x="432" y="50" font-size="18" font-weight="bold">108</text><text x="152" y="243" font-size="13">Lean</text><text x="292" y="243" font-size="13">Base</text><text x="432" y="243" font-size="13">High</text></g></svg></div>
+            <div class="budget-notes"><div class="budget-note"><span>Turnkey + สระ infinity</span><b>52–66 ลบ.</b></div><div class="budget-note"><span>FF&amp;E + OS&amp;E (10 ห้อง)</span><b>~12 ลบ.</b></div><div class="budget-note"><span>ออกแบบ / ภูมิทัศน์ / premium ซอยลึก / contingency / VAT</span><b>~16–26 ลบ.</b></div><p class="small">ช่วงย่อยเป็น benchmark โดยประมาณและไม่ได้ใช้เป็น BOQ; งบ Base 80 ล้านบาทเป็นตัวเลขกลมสำหรับ screening</p></div>
+          </div>
+          <div class="calculator" id="calculator"><h3>Return calculator</h3><p class="sub">ปรับสมมุติฐานโมเดลเช่าทั้งหลังรายคืน · คำนวณในหน้าแบบไม่บันทึกข้อมูล</p>
+            <div class="presets"><button type="button" data-preset="base">Base</button><button type="button" data-preset="hybrid">Hybrid equivalent</button><button type="button" data-preset="upside">Upside</button></div>
+            <div class="control"><div class="control-head"><label for="adr">ค่าเช่า / คืน</label><output id="adrOut">35,000 บาท</output></div><input id="adr" type="range" min="25000" max="60000" step="1000" value="35000" /></div>
+            <div class="control"><div class="control-head"><label for="occ">Occupancy</label><output id="occOut">38%</output></div><input id="occ" type="range" min="25" max="60" step="1" value="38" /></div>
+            <div class="control"><div class="control-head"><label for="capex">งบก่อสร้าง</label><output id="capexOut">80 ล้านบาท</output></div><input id="capex" type="range" min="60" max="110" step="1" value="80" /></div>
+            <div class="control"><div class="control-head"><span>รูปแบบดำเนินงาน</span></div><div class="radio"><label><input type="radio" name="ops" value="3.2" checked />Lean · 3.2 ลบ.</label><label><input type="radio" name="ops" value="6.4" />Full · 6.4 ลบ.</label></div></div>
+            <div class="calc-results" aria-live="polite"><div class="calc-result"><span>รายได้ / ปี</span><b id="revOut">4.86 ลบ.</b></div><div class="calc-result"><span>NOI / ปี</span><b id="noiOut">1.11 ลบ.</b></div><div class="calc-result"><span>Net yield</span><b id="yieldOut">1.4%</b></div><div class="calc-result"><span>Payback</span><b id="paybackOut">72.2 ปี</b></div></div>
+            <p class="formula">สูตร: รายได้ = ADR × 365 × occupancy; NOI = รายได้ − fixed OPEX − OTA 12% ของ 60% รายได้ − FF&amp;E reserve 4%. ยังไม่รวมดอกเบี้ย ภาษีเงินได้ และค่าเสื่อม</p>
+          </div>
+        </div>
+        <div class="returns" aria-label="เปรียบเทียบผลตอบแทนสามกรณี"><div class="case head"><span>กรณี</span><span>รายได้</span><span>NOI</span><span>Yield</span><span>Payback</span></div><div class="case"><b>A · 35k × 38%</b><span>4.9 ลบ.</span><span>~1.1 ลบ.</span><span>~1.4%</span><span>~70+ ปี</span></div><div class="case"><b>D · Hybrid</b><span>4.0 ลบ.</span><span>~0.6 ลบ.</span><span>~0.7%</span><span>ยาวมาก</span></div><div class="case upside"><b>Upside · 45k × 50%</b><span>8.2 ลบ.</span><span>~3.9 ลบ.</span><span>~4.9%</span><span>~21 ปี</span></div></div>
+      </div>
+    </section>
+
+    <section class="section" id="build" hidden>
+      <div class="wrap">
+        <div class="section-head"><div><span class="eyebrow">06 · Construction & delivery</span><h2>16–21 เดือน<br>หากใบอนุญาตเดินคู่ขนาน</h2></div><p>เป้าหมายเปิดต้น–กลางปี 2028 เป็นประมาณการจาก design, permit, procurement และก่อสร้าง—ไม่ใช่กำหนดการรับรอง ความกว้างซอยจริงอาจเพิ่มเวลา 1–2 เดือน</p></div>
+        <div class="timeline" aria-label="ไทม์ไลน์โครงการ"><div class="phase"><small>2–3 เดือน</small><h3>ออกแบบ</h3><p>สถาปัตย์ โครงสร้าง ระบบ และ interior</p></div><div class="phase"><small>1–2.5 เดือน</small><h3>อนุญาต + tender</h3><p>e-Permit มีเป้า 14 วัน แต่ควรเผื่อประสบการณ์จริง</p></div><div class="phase"><small>11–14 เดือน</small><h3>ก่อสร้าง</h3><p>ฐานราก โครงสร้าง MEP งานตกแต่งและ landscape</p></div><div class="phase"><small>4–6 เดือน</small><h3>ใบอนุญาตโรงแรม</h3><p>ทำคู่ขนานช่วงท้าย หลังเอกสารอาคารพร้อม</p></div></div>
+        <div class="build-grid"><article class="build-card"><span class="pill assume">+5–15% ต้นทุน</span><h3>เสาเข็มเจาะ</h3><p>ลดแรงสั่นสะเทือนและทำงานในพื้นที่แคบได้ เหมาะกว่าการตอกเสาเข็มใกล้บ้านข้างเคียง</p></article><article class="build-card"><span class="pill assume">ท่อยาว ~200 ม.</span><h3>Concrete pumping</h3><p>จอดรถโม่ที่ปากซอยแล้วต่อท่อ หรือใช้รถปั๊มขนาดเล็ก; ต้องสำรวจเส้นทางและจุดตั้งรถจริง</p></article><article class="build-card"><span class="pill assume">+1–2 เดือน</span><h3>Micro logistics</h3><p>ใช้รถ 4 ล้อเล็กหลายเที่ยว จัด staging area และกำหนดช่วงเวลางานเสียงดังร่วมกับเพื่อนบ้าน</p></article></div>
+      </div>
+    </section>
+
+    <section class="section" id="next" hidden>
+      <div class="wrap">
+        <div class="section-head"><div><span class="eyebrow">07 · Decision gates</span><h2>ยังไม่ควรทุ่ม<br>ค่าออกแบบเต็มรูปแบบ</h2></div><p>ผ่าน 3 ประตูนี้ก่อนจึงค่อยเดิน concept design และ BOQ รายละเอียด เพราะแต่ละข้อสามารถเปลี่ยนจำนวนห้อง footprint หรือโมเดลธุรกิจได้โดยตรง</p></div>
+        <div class="steps"><article class="step"><div><h3>ยืนยันผังเมืองรายแปลง</h3><p>ตรวจโซนจริง เงื่อนไขโรงแรม และแนวโน้มร่างผังใหม่กับสำนักงานเขตพญาไท / สำนักการวางผังฯ</p></div><span class="tag-state">ต้องทำก่อน</span></article><article class="step"><div><h3>วัดซอย + ตรวจสถานะถนน</h3><p>สำรวจความกว้างตลอดแนว จุดคอขวด รถดับเพลิง การกลับรถ และยืนยันว่าแปลงติดถนนสาธารณะ</p></div><span class="tag-state">ต้องทำก่อน</span></article><article class="step"><div><h3>Massing & parking study</h3><p>ทดสอบระยะร่น สระ OSR circulation งานบริการ และ stacker 10 คันบนพื้นที่ 400 ตร.ม.</p></div><span class="tag-state">ต้องทำก่อน</span></article></div>
+        <div class="options"><article class="option"><span class="pill assume">ตามบรีฟ</span><h3>10 ห้อง</h3><p>รักษารายได้สูงสุด แต่แบกใบอนุญาตโรงแรม ที่จอดรถ 10 คัน และ capex Base ~80 ล้านบาท</p></article><article class="option recommended"><span class="pill" style="background:rgba(255,255,255,.15);color:white">ทางเลือกลดความเสี่ยง</span><h3>ลดเหลือ 8 ห้อง</h3><p>ลดแรงกดดันด้านพื้นที่และ capex ไปทาง Lean ~64 ล้านบาท; ประโยชน์ด้านกฎหมายขึ้นกับกฎหมายที่ใช้จริง ณ วันยื่น</p></article><article class="option"><span class="pill assume">เชิงพาณิชย์</span><h3>JV กับ operator</h3><p>ซื้อ brand, distribution และ know-how การเดินโรงแรม แลกกับส่วนแบ่งรายได้และอำนาจควบคุมบางส่วน</p></article></div>
+      </div>
+    </section>
+
+    <section class="verdict" id="verdict" hidden>
+      <div class="wrap"><div><span class="eyebrow">Executive verdict</span></div><div><blockquote>ผลตอบแทนค่าเช่า 1–5% ไม่คุ้มทุนก่อสร้าง luxury ในกรอบปกติ</blockquote><p>โครงการจะสมเหตุสมผลกว่าเมื่อมองเป็น <strong>land bank + lifestyle asset + รายได้เสริมจาก event / filming</strong> ไม่ใช่เครื่องผลิต cash flow เพียงอย่างเดียว หากโจทย์หลักคือผลตอบแทน ควรทดสอบ 8 ห้องหรือ JV ก่อนยืนยันแบบ 10 ห้อง</p></div></div>
+    </section>
+
+    <section class="sources" id="sources" hidden>
+      <div class="wrap">
+        <span class="eyebrow">Sources & basis</span><h2 style="font-family:var(--serif);font-weight:400">แหล่งอ้างอิง / Sources</h2>
+        <p class="lead" style="max-width:850px">แต่ละตัวเลขหลักผูกกลับไปยังประเภทหลักฐาน เพื่อแยก “ราคาที่ผู้ขายตั้ง” ออกจากกฎหมายและประมาณการเชิงวิเคราะห์</p>
+        <div class="source-legend" aria-label="คำอธิบายสัญลักษณ์"><span>🏷️ ราคาประกาศขายจริง — asking price ไม่ใช่ราคาซื้อขายจริง</span><span>🏛️ เอกสารราชการ / กฎหมาย</span><span>📊 ประมาณการจาก benchmark</span></div>
+
+        <details open><summary>01 · ราคาที่ดิน — ประกาศจริงย่านอารีย์–พญาไท</summary><ul class="source-list">
+          <li>🏷️ <a href="https://propertyhub.in.th/ขายที่ดิน/ซอยอารีย์" target="_blank" rel="noopener">PropertyHub · ขายที่ดินซอยอารีย์ (22 ประกาศ)</a><br>ฐาน comparables ก.ย. 2026: อินทามระ ซ.3 235,965 บาท/ตร.ว.; ซ.สายลม 253,125; อินทามระ ซ.13 191,277; อินทามระ ซ.28 188,235; วิภาวดี ซ.4 180,905 บาท/ตร.ว. เป็น asking price จากประกาศวันที่ 21–22 ก.ย. 2026<span class="accessed">เข้าถึง: 6 ต.ค. 2026</span></li>
+          <li>🏷️ <a href="https://www.teedin108.com/land/view/4029677/" target="_blank" rel="noopener">teedin108 · พหลโยธิน 8 (ซ.สายลม)</a><br>แปลง 98.5 ตร.ว. ที่ 230,000 บาท/ตร.ว. เป็น comparable ที่ใกล้เคียงสเปก 100 ตร.ว. ที่สุด<span class="accessed">เข้าถึง: 6 ต.ค. 2026</span></li>
+          <li>🏛️ <strong style="color:var(--ink)">ราคาประเมินกรมธนารักษ์ รอบ 2566–2569</strong><br>ซอยอารีย์สัมพันธ์ประมาณ 90,000 บาท/ตร.ว. ใช้เป็นฐานภาษีเท่านั้น ไม่ใช่ราคาตลาดหรือราคาซื้อขายจริง<span class="accessed">เข้าถึง: 6 ต.ค. 2026</span></li>
+        </ul></details>
+
+        <details open><summary>02 · ค่าเช่าพูลวิลล่าและ occupancy</summary><ul class="source-list">
+          <li>🏷️ <a href="https://www.tiktok.com/@my_poolvilla/video/7554366429806464263" target="_blank" rel="noopener">ม่วนใจพูลวิลล่า · 10 ห้องนอน</a><br>ใช้เรท 19,900 บาท/คืน เป็นหลักฐานฝั่งเซกเมนต์ปาร์ตี้ ไม่ใช่ luxury positioning<span class="accessed">เข้าถึง: 6 ต.ค. 2026</span></li>
+          <li>🏷️ <a href="https://www.tiktok.com/@poolvilla.review/video/7528005096588709127" target="_blank" rel="noopener">Great Oasis Pool Villa · 10 ห้องนอน</a><br>ใช้เรทเริ่มต้น 23,900 บาท/คืน เป็น comparable ตลาดพูลวิลล่ากลุ่มใหญ่<span class="accessed">เข้าถึง: 6 ต.ค. 2026</span></li>
+          <li>🏷️ <a href="https://www.tiktok.com/@bangkokpoolvilla/video/7483856595378621703" target="_blank" rel="noopener">รีวิวพูลวิลล่ากรุงเทพ · หลายหลัง</a><br>ใช้เทียบช่วงราคาประกาศของตลาดปาร์ตี้ในกรุงเทพฯ<span class="accessed">เข้าถึง: 6 ต.ค. 2026</span></li>
+          <li>📊 <a href="https://www.airroi.com/airbnb-data/thailand/krung-thep-maha-nakhon" target="_blank" rel="noopener">AirROI · Bangkok Airbnb data</a><br>ใช้ occupancy เขตพญาไท 41.0% ณ ก.ย. 2026; แบบจำลองวิลล่าใช้ฐานระมัดระวัง 30–40% เพราะเป็นสินค้าราคาสูง<span class="accessed">เข้าถึง: 6 ต.ค. 2026</span></li>
+          <li>🏷️ <a href="https://www.accomasia.co.th/property-for-rent/bts-station-ari" target="_blank" rel="noopener">Accomasia · บ้านเช่าใกล้ BTS อารีย์</a><br>ใช้ราคาประกาศบ้าน 4BR 70,000 บาท/เดือน และบ้านมีสระ 120,000 บาท/เดือน เป็นฐานสังเคราะห์โมเดล long-stay<span class="accessed">เข้าถึง: 6 ต.ค. 2026</span></li>
+        </ul></details>
+
+        <details><summary>03 · ต้นทุนก่อสร้าง</summary><ul class="source-list">
+          <li>📊 <a href="https://www.banidea.com/house-price-calculator/" target="_blank" rel="noopener">บ้านไอเดีย · ราคากลางก่อสร้าง</a><br>ช่วงทั่วไป 9,000–12,000; ระดับกลาง 13,000–15,000; พรีเมียม 15,000–20,000 บาท/ตร.ม. ซึ่งยังไม่ใช่งานตกแต่ง luxury<span class="accessed">เข้าถึง: 6 ต.ค. 2026</span></li>
+          <li>📊 <a href="https://www.banidea.com/building-a-low-cost-home/" target="_blank" rel="noopener">บ้านไอเดีย · ข้อควรระวังงบต่ำกว่ามาตรฐาน</a><br>ใช้เป็น caveat ว่าราคาต่ำอาจไม่รวมสุขภัณฑ์ ระบบไฟฟ้า หรืองานตกแต่ง<span class="accessed">เข้าถึง: 6 ต.ค. 2026</span></li>
+          <li>📊 <strong style="color:var(--ink)">Luxury turnkey benchmark synthesis</strong><br>ช่วง 55,000–70,000 บาท/ตร.ม. และงบ Lean / Base / High 64 / 80 / 108 ล้านบาท สังเคราะห์จาก benchmark หลายเจ้า (รวม ARRAY, SEACON และสื่ออสังหาฯ) ไม่ใช่ใบเสนอราคา ต้องถอด BOQ จากแบบจริง<span class="accessed">เข้าถึง: 6 ต.ค. 2026</span></li>
+        </ul></details>
+
+        <details><summary>04 · กฎหมาย ผังเมือง และภาษี</summary><ul class="source-list">
+          <li>🏛️ <a href="https://www.thansettakij.com/real-estate/667968" target="_blank" rel="noopener">ฐานเศรษฐกิจ · FAR / OSR โซน ย.4</a><br>ใช้ค่า FAR 3:1 และ OSR ≥10%; โซนจริงของแปลงยังต้องยืนยันกับ กทม.<span class="accessed">เข้าถึง: 6 ต.ค. 2026</span></li>
+          <li>🏛️ <a href="http://www.bsa.or.th/index.php?lay=show&ac=article&Ntype=18&Id=539611512" target="_blank" rel="noopener">กฎกระทรวงโรงแรม · BSA</a><br>ใช้เกณฑ์ยกเว้นและเงื่อนไขใบอนุญาตที่ทำให้โครงการ 10 ห้องเข้าข่ายโรงแรม<span class="accessed">เข้าถึง: 6 ต.ค. 2026</span></li>
+          <li>🏛️ <a href="https://www.khaosod.co.th/economics/news_10418442" target="_blank" rel="noopener">ร่าง พ.ร.บ.สถานที่พักแรม · ก.ย. 2026</a><br>ใช้สถานะว่าผ่านความเห็นชอบ ครม. แต่ยังไม่เป็นกฎหมาย และกรอบจำพวก 2 สำหรับ 8–40 ห้อง<span class="accessed">เข้าถึง: 6 ต.ค. 2026</span></li>
+          <li>🏛️ <a href="https://www.senate.go.th/document/Theme/Ext6/6274_0001.PDF" target="_blank" rel="noopener">วุฒิสภา · กระทู้ถามเรื่องที่พักแรม</a><br>ใช้ประกอบการตีความปัญหาที่พักรายวันและการบังคับใช้กฎหมายโรงแรม<span class="accessed">เข้าถึง: 6 ต.ค. 2026</span></li>
+          <li>🏛️ <a href="https://www.matichon.co.th/local/news_5718896" target="_blank" rel="noopener">มติชน · ร่างผังเมืองรวม กทม. ฉบับใหม่</a><br>ใช้ caveat ว่าร่างใหม่มีแนวโน้มกำกับความกว้างถนนและคาดเปลี่ยนในอนาคต<span class="accessed">เข้าถึง: 6 ต.ค. 2026</span></li>
+          <li>🏛️ <a href="https://www.siamsafety.com/Hotel_Pollution_Inspection_Manual.pdf" target="_blank" rel="noopener">คู่มือตรวจสอบมลพิษโรงแรม</a><br>ใช้เกณฑ์ EIA และข้อกำหนดระบบบำบัดน้ำเสียของโรงแรม<span class="accessed">เข้าถึง: 6 ต.ค. 2026</span></li>
+          <li>🏛️ <a href="https://www.supalai.com/blog/detail/ภาษีที่ดินปี-2569" target="_blank" rel="noopener">อัตราภาษีที่ดินและสิ่งปลูกสร้าง 2569</a><br>ใช้ฐานอัตราพาณิชย์ 0.3% สำหรับมูลค่าไม่เกิน 50 ล้านบาท<span class="accessed">เข้าถึง: 6 ต.ค. 2026</span></li>
+        </ul></details>
+
+        <div class="disclaimer"><span>แบบร่างคอนเซ็ปต์เพื่อการศึกษาความเป็นไปได้เบื้องต้น ไม่ใช่ความเห็นทางกฎหมาย/การเงิน ควรตรวจสอบรายแปลงกับสำนักงานเขตพญาไทและผู้เชี่ยวชาญก่อนตัดสินใจลงทุน</span><span>ตุลาคม 2026</span></div>
+      </div>
+    </section>
+  </main>
+
+  <audio id="ambientAudio" src="assets/music.mp3" preload="metadata" loop></audio>
+  <button class="music-toggle" id="musicToggle" type="button" aria-pressed="false" aria-label="เปิดเพลงบรรยากาศ" title="เปิดเพลงบรรยากาศ">
+    <svg class="icon-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 7.5v9l8-4.5z" fill="currentColor"/><path d="M4 9.5v5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M20 8v8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+    <svg class="icon-pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 7h3v10H8zm5 0h3v10h-3z" fill="currentColor"/><path d="M4 9.5v5M20 8v8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+  </button>
+
+  <script>
+    (function(){
+      var tabs=document.querySelectorAll('[data-tab]');
+      var panels=document.querySelectorAll('[data-panel]');
+      tabs.forEach(function(btn){btn.addEventListener('click',function(){
+        tabs.forEach(function(x){x.classList.remove('active');x.setAttribute('aria-selected','false')});
+        panels.forEach(function(x){x.classList.remove('active')});
+        btn.classList.add('active');btn.setAttribute('aria-selected','true');
+        document.querySelector('[data-panel="'+btn.getAttribute('data-tab')+'"]').classList.add('active');
+      })});
+
+      var adr=document.getElementById('adr'),occ=document.getElementById('occ'),capex=document.getElementById('capex');
+      var adrOut=document.getElementById('adrOut'),occOut=document.getElementById('occOut'),capexOut=document.getElementById('capexOut');
+      var revOut=document.getElementById('revOut'),noiOut=document.getElementById('noiOut'),yieldOut=document.getElementById('yieldOut'),paybackOut=document.getElementById('paybackOut');
+      function fmt(n,d){return n.toLocaleString('th-TH',{minimumFractionDigits:d,maximumFractionDigits:d})}
+      function update(){
+        var a=Number(adr.value),o=Number(occ.value)/100,c=Number(capex.value),ops=Number(document.querySelector('input[name="ops"]:checked').value);
+        var rev=a*365*o/1000000;
+        var noi=rev-(rev*.12*.60)-(rev*.04)-ops;
+        var y=noi>0?noi/c*100:0;
+        adrOut.textContent=a.toLocaleString('th-TH')+' บาท';occOut.textContent=occ.value+'%';capexOut.textContent=capex.value+' ล้านบาท';
+        revOut.textContent=fmt(rev,2)+' ลบ.';noiOut.textContent=fmt(noi,2)+' ลบ.';yieldOut.textContent=fmt(y,1)+'%';paybackOut.textContent=noi>0?fmt(c/noi,1)+' ปี':'ไม่คืนทุน';
+      }
+      [adr,occ,capex].forEach(function(x){x.addEventListener('input',update)});document.querySelectorAll('input[name="ops"]').forEach(function(x){x.addEventListener('change',update)});
+      document.querySelectorAll('[data-preset]').forEach(function(btn){btn.addEventListener('click',function(){var p=btn.getAttribute('data-preset');var ops=document.querySelectorAll('input[name="ops"]');if(p==='base'){adr.value=35000;occ.value=38;capex.value=80;ops[0].checked=true}if(p==='hybrid'){adr.value=40000;occ.value=27;capex.value=80;ops[0].checked=true}if(p==='upside'){adr.value=45000;occ.value=50;capex.value=80;ops[0].checked=true}update()})});
+      update();
+
+      var audio=document.getElementById('ambientAudio');
+      var musicToggle=document.getElementById('musicToggle');
+      function setMusicState(isPlaying){
+        musicToggle.setAttribute('aria-pressed',isPlaying?'true':'false');
+        musicToggle.setAttribute('aria-label',isPlaying?'หยุดเพลงบรรยากาศ':'เปิดเพลงบรรยากาศ');
+        musicToggle.setAttribute('title',isPlaying?'หยุดเพลงบรรยากาศ':'เปิดเพลงบรรยากาศ');
+      }
+      musicToggle.addEventListener('click',function(){
+        if(audio.paused){audio.play().then(function(){setMusicState(true)}).catch(function(){setMusicState(false)})}
+        else{audio.pause();setMusicState(false)}
+      });
+      audio.addEventListener('pause',function(){setMusicState(false)});
+      audio.addEventListener('play',function(){setMusicState(true)});
+    })();
+  </script>
+</body>
+</html>
