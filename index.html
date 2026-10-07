@@ -282,7 +282,7 @@
     </section>
   </main>
 
-  <audio id="ambientAudio" src="assets/music.mp3" preload="metadata" loop></audio>
+  <audio id="ambientAudio" src="assets/music.mp3" preload="auto" loop></audio>
   <button class="music-toggle" id="musicToggle" type="button" aria-pressed="false" aria-label="เปิดเพลงบรรยากาศ" title="เปิดเพลงบรรยากาศ">
     <svg class="icon-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 7.5v9l8-4.5z" fill="currentColor"/><path d="M4 9.5v5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M20 8v8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
     <svg class="icon-pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 7h3v10H8zm5 0h3v10h-3z" fill="currentColor"/><path d="M4 9.5v5M20 8v8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
@@ -317,14 +317,22 @@
 
       var audio=document.getElementById('ambientAudio');
       var musicToggle=document.getElementById('musicToggle');
+      var userInterrupted=false;
       function setMusicState(isPlaying){
         musicToggle.setAttribute('aria-pressed',isPlaying?'true':'false');
         musicToggle.setAttribute('aria-label',isPlaying?'หยุดเพลงบรรยากาศ':'เปิดเพลงบรรยากาศ');
         musicToggle.setAttribute('title',isPlaying?'หยุดเพลงบรรยากาศ':'เปิดเพลงบรรยากาศ');
       }
+      function startMusic(){return audio.play().then(function(){setMusicState(true)}).catch(function(){});}
+      startMusic();
+      function onFirstGesture(){if(userInterrupted)return;startMusic();}
+      document.addEventListener('pointerdown',onFirstGesture,{once:true});
+      document.addEventListener('touchstart',onFirstGesture,{once:true});
+      document.addEventListener('keydown',onFirstGesture,{once:true});
       musicToggle.addEventListener('click',function(){
-        if(audio.paused){audio.play().then(function(){setMusicState(true)}).catch(function(){setMusicState(false)})}
-        else{audio.pause();setMusicState(false)}
+        userInterrupted=true;
+        if(audio.paused){startMusic();}
+        else{audio.pause();setMusicState(false);}
       });
       audio.addEventListener('pause',function(){setMusicState(false)});
       audio.addEventListener('play',function(){setMusicState(true)});
