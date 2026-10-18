@@ -48,7 +48,9 @@
     @media(max-width:560px){
       .wrap,.hero-inner{width:min(100% - 24px,1180px)}.hero{min-height:760px}.hero h1{font-size:3.35rem}.section-nav{position:relative}.section-nav .inner{width:calc(100% - 18px);flex-wrap:wrap;justify-content:center;gap:2px 5px}.section-nav a{padding:4px 7px}.principles,.model-grid,.options,.fact-grid{grid-template-columns:1fr}.gallery img{min-height:240px}.metric-row{grid-template-columns:1fr 1fr}.metric{padding:16px}.risk{grid-template-columns:32px 1fr}.risk .severity{grid-column:2}.comp-row{grid-template-columns:1fr 72px}.comp-row>*:nth-child(3){display:none}.calculator{padding:22px 18px}.calc-results{grid-template-columns:1fr 1fr}.returns{overflow:hidden}.case{font-size:.82rem}.timeline{grid-template-columns:1fr}.step{grid-template-columns:44px 1fr}.step .tag-state{grid-column:2}.disclaimer{display:block}.section h2{font-size:2.6rem}.location-quote{padding:24px}.contact-actions{display:grid}.contact-action{width:100%}.music-toggle{width:48px;height:48px}}
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.gallery img{transition:none}}
+  .pano-hint{font-size:.85rem;opacity:.65;margin-top:10px}
   </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css">
 </head>
 <body>
   <header class="hero" aria-label="ภาพแนวคิดพูลวิลล่า 3 ชั้นโอบล้อมสระกลาง">
@@ -69,7 +71,7 @@
 
   <nav class="section-nav" aria-label="สารบัญ">
     <div class="inner">
-      <a href="#concept">แนวคิด</a><a href="#plans">ผังพื้นที่</a><a href="#location">ทำเล</a><a href="#contact">ติดต่อ</a>
+      <a href="#concept">แนวคิด</a><a href="#tour360">360°</a><a href="#plans">ผังพื้นที่</a><a href="#location">ทำเล</a><a href="#contact">ติดต่อ</a>
     </div>
   </nav>
 
@@ -94,6 +96,14 @@
       </div>
     </section>
 
+    <section class="section" id="tour360">
+      <div class="wrap">
+        <div><span class="eyebrow">Virtual Tour</span><h2>หมุนดูรอบทิศ 360°</h2></div>
+        <div><p class="lead">ลากเพื่อหมุนชม Courtyard Pool — หัวใจของบ้าน ARI TEN แบบรอบทิศ 360 องศา (ภาพจำลองคอนเซ็ปต์)</p>
+        <div id="pano360" style="width:100%;height:min(62vh,520px);min-height:340px;border-radius:14px;overflow:hidden;background:#141210"></div>
+        <p class="pano-hint">ลากซ้าย-ขวาเพื่อหมุน &middot; บีบ/กางนิ้วหรือใช้ล้อเมาส์เพื่อซูม</p></div>
+      </div>
+    </section>
     <section class="section" id="plans">
       <div class="wrap">
         <div class="section-head">
@@ -336,6 +346,15 @@
       });
       audio.addEventListener('pause',function(){setMusicState(false)});
       audio.addEventListener('play',function(){setMusicState(true)});
+    })();
+  </script>
+<script src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
+  <script>
+    (function(){
+      var el=document.getElementById('pano360');
+      if(!el||!window.pannellum)return;
+      var v=pannellum.viewer('pano360',{type:'equirectangular',panorama:'assets/pano.webp',autoLoad:true,autoRotate:-2.2,compass:false,showZoomCtrl:true,mouseZoom:true});
+      el.addEventListener('pointerdown',function(){try{v.stopAutoRotate();}catch(e){}},{once:true});
     })();
   </script>
 </body>
