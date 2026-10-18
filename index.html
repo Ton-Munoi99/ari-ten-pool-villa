@@ -353,8 +353,15 @@
     (function(){
       var el=document.getElementById('pano360');
       if(!el||!window.pannellum)return;
-      var v=pannellum.viewer('pano360',{type:'equirectangular',panorama:'assets/pano.webp',autoLoad:true,autoRotate:-2.2,compass:false,showZoomCtrl:true,mouseZoom:true});
-      el.addEventListener('pointerdown',function(){try{v.stopAutoRotate();}catch(e){}},{once:true});
+      var SPEED=-2.2,spinning=false,idleTimer=null;
+      var v=pannellum.viewer('pano360',{type:'equirectangular',panorama:'assets/pano.webp',autoLoad:true,autoRotate:false,compass:false,showZoomCtrl:true,mouseZoom:true});
+      function startSpin(){if(spinning)return;spinning=true;try{v.startAutoRotate(SPEED);}catch(e){}}
+      function stopSpin(){if(!spinning)return;spinning=false;try{v.stopAutoRotate();}catch(e){}}
+      el.addEventListener('pointerdown',function(){stopSpin();clearTimeout(idleTimer);idleTimer=setTimeout(startSpin,6000);});
+      function onVisible(vis){clearTimeout(idleTimer);if(vis){startSpin();}else{stopSpin();}}
+      if('IntersectionObserver' in window){
+        new IntersectionObserver(function(es){es.forEach(function(en){onVisible(en.isIntersecting);});},{threshold:0.2}).observe(el);
+      }else{startSpin();}
     })();
   </script>
 </body>
